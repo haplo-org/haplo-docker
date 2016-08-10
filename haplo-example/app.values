@@ -1,0 +1,8 @@
+#
+# these are the values passed into the app
+#
+APPURL="fred.local"
+APPNAME="Fred"
+APPUNAME="Fred Bloggs"
+APPUMAIL="fred@example.com"
+APPUPASS="fred123"
