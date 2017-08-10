@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   software-properties-common \
   sudo \
   supervisor \
+  unzip \
   uuid-dev \
   && rm -rf /var/lib/apt/lists/*
 RUN apt-get update && apt-get install -y --no-install-recommends \
