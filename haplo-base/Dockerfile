@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   libxapian22v5 \
   make \
   maven \
-  openjdk-8-jdk \
+  openjdk-8-jdk-headless \
   patch \
   software-properties-common \
   sudo \
