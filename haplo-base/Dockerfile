@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   curl \
   g++ \
   git \
+  language-pack-en \
   libxapian22v5 \
   make \
   maven \
@@ -17,6 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   unzip \
   uuid-dev \
   && rm -rf /var/lib/apt/lists/*
+ENV LANG en_GB.UTF-8
 RUN apt-get update && apt-get install -y --no-install-recommends \
   postgresql-$PG_VERSION \
   postgresql-server-dev-$PG_VERSION \
