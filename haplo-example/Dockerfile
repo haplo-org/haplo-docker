@@ -1,5 +1,5 @@
 FROM haplo-app
-MAINTAINER Peter Tribble <peter.tribble@haplo-services.com>
+MAINTAINER Peter Tribble <peter.tribble@haplo.com>
 COPY app.values haplo-app.sh /home/hbuild/
 USER hbuild
 ENV USER hbuild

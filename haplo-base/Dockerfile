@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER Peter Tribble <peter.tribble@haplo-services.com>
+MAINTAINER Peter Tribble <peter.tribble@haplo.com>
 ENV PG_VERSION 9.5
 RUN apt-get update && apt-get install -y --no-install-recommends \
   avahi-daemon \

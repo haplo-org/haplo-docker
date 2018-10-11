@@ -1,5 +1,5 @@
 FROM haplo-base
-MAINTAINER Peter Tribble <peter.tribble@haplo-services.com>
+MAINTAINER Peter Tribble <peter.tribble@haplo.com>
 RUN useradd -m -U -G sudo hbuild && echo "hbuild ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 USER hbuild
 ENV USER hbuild

@@ -1,5 +1,5 @@
 FROM haplo-app
-MAINTAINER Peter Tribble <peter.tribble@haplo-services.com>
+MAINTAINER Peter Tribble <peter.tribble@haplo.com>
 USER hbuild
 ENV USER hbuild
 COPY haplo-test.sh /home/hbuild/

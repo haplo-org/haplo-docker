@@ -11,7 +11,7 @@ First, you need to be running Docker. You can run Docker on a Linux server, eith
 With Docker, you run containers from images. Images are built up in layers, like an onion. The examples provided here are built in 3 layers:
 
  * A base Linux layer, containing an Ubuntu image with the additional packages needed by Haplo
- * A [Haplo](http://haplo.org) layer, extending the base by building and installing the Haplo stack
+ * A [Haplo](https://haplo.org) layer, extending the base by building and installing the Haplo stack
  * An application layer, an instance of Haplo with configuration and data
 
 Because Docker containers are ephemeral, a Volume container is created to store persistent data.
