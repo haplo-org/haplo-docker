@@ -57,6 +57,7 @@ if [ ! -f /haplo/sslcerts/server.crt ]; then
     echo " *** Haplo creating server certificate ***"
     cd /opt/haplo
     ./deploy/make_cert $APPURL > /dev/null
+    chmod a+r /tmp/haplo-sslcerts/*
     sudo su haplo -c 'cd /tmp/haplo-sslcerts ; cp server.crt  server.crt.csr  server.key /haplo/sslcerts'
     rm -fr /tmp/haplo-sslcerts
     echo " *** Haplo server certificate created and installed ***"
