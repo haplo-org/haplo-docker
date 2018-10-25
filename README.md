@@ -6,6 +6,8 @@
 
 First, you need to be running Docker. You can run Docker on a Linux server, either your own or in the cloud. You can also run Docker on a desktop or laptop computer running Windows or MacOS.
 
+If you just want to run a Haplo instance, then look at the [quickstart](https://haplo.org/documentation/run/docker).
+
 ### Overall structure
 
 With Docker, you run containers from images. Images are built up in layers, like an onion. The examples provided here are built in 3 layers:
@@ -17,8 +19,6 @@ With Docker, you run containers from images. Images are built up in layers, like
 Because Docker containers are ephemeral, a Volume container is created to store persistent data.
 
 It's also very simple to run the Haplo test suite.
-
-The examples here are a work in progress. As we gain more experience, we intend to publish our own pre-built Docker images.
 
 ### Walkthrough
 
