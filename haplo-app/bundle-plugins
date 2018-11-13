@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# we need to bundle up any plugins required for the build
+#
+
+#
+# this would normally be done outside docker, to avoid having to put
+# the plugin tool inside the container (where it's not really any use)
+#
+
+#
+# at the present time the only plugin bundle we ship is the repository demo
+#
+
+BDIR=/tmp/plugin-build.$$
+BUNDLE=hresrepodemo_application
+
+mkdir $BDIR
+cd $BDIR
+
+git clone https://github.com/haplo-org/haplo-repository
+git clone https://github.com/haplo-org/haplo-research-manager
+git clone https://github.com/haplo-org/haplo-plugins
+
+mkdir $BUNDLE
+
+cd haplo-plugins
+haplo-plugin -p ALL --output ${BDIR}/${BUNDLE} pack
+cd ..
+cd haplo-repository
+haplo-plugin -p ALL --output ${BDIR}/${BUNDLE} pack
+cd ..
+cd haplo-research-manager
+haplo-plugin -p ALL --output ${BDIR}/${BUNDLE} pack
+cd ..
+
+tar czf /tmp/${BUNDLE}.tar.gz $BUNDLE
+
+cd /tmp
+rm -fr $BDIR
+
+ls -lh /tmp/${BUNDLE}.tar.gz

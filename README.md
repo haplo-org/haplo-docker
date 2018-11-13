@@ -28,11 +28,20 @@ First create the base image, using the Dockerfile found in haplo-base
     docker build -t haplo-base .
     cd ..
 
+You'll need to create the demo plugin tarball
+
+    cd haplo-app
+    ./bundle-plugins
+    cp /tmp/hresrepodemo_application.tar.gz .
+    cd ..
+
 Then create the haplo image, using the Dockerfile and scripts found in haplo-app
 
     cd haplo-app
     docker build -t haplo-app .
     cd ..
+
+(If you don't want the demo application, then you can safely remove the ADD line in the Dockerfile.)
 
 Then instantiate an application. In haplo-example you will find a sample configuration, the key data you need to supply are in the file `app.values`, where you can set:
 
