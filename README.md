@@ -6,7 +6,7 @@
 
 First, you need to be running Docker. You can run Docker on a Linux server, either your own or in the cloud. You can also run Docker on a desktop or laptop computer running Windows or MacOS.
 
-If you just want to run a Haplo instance, then look at the [quickstart](https://haplo.org/documentation/run/docker).
+If you just want to run a Haplo instance, then look at the [quickstart](https://docs.haplo.org/platform/run/docker).
 
 ### Overall structure
 
