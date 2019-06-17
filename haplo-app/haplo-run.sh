@@ -1,6 +1,6 @@
 #!/bin/bash
 # Haplo Platform                                    https://haplo.org
-# (c) Haplo Services Ltd 2006 - 2018            https://www.haplo.com
+# (c) Haplo Services Ltd 2006 - 2019            https://www.haplo.com
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -35,7 +35,7 @@ if [ ! -d /haplo ]; then
 fi
 # if an empty volume it will exist but have the wrong owner, so always chown
 sudo chown haplo:haplo /haplo
-for subdir in log tmp generated-downloads files textweighting plugins messages messages/app_create messages/app_modify messages/spool sslcerts
+for subdir in log tmp run generated-downloads files textweighting plugins messages messages/app_create messages/app_modify messages/spool sslcerts
 do
     if [ ! -d /haplo/$subdir ]; then
 	sudo mkdir /haplo/$subdir
