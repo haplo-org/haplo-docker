@@ -1,6 +1,6 @@
 #!/bin/bash
 # Haplo Platform                                    https://haplo.org
-# (c) Haplo Services Ltd 2006 - 2018            https://www.haplo.com
+# (c) Haplo Services Ltd 2006 - 2019            https://www.haplo.com
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
@@ -80,7 +80,7 @@ fi
 if [ ! -f /haplo/sslcerts/server.crt ]; then
     echo " *** Haplo creating server certificate ***"
     cd /opt/haplo
-    ./deploy/make_cert $APPURL > /dev/null
+    ./deploy/make_cert.sh $APPURL > /dev/null
     chmod a+r /tmp/haplo-sslcerts/*
     sudo su haplo -c 'cd /tmp/haplo-sslcerts ; cp server.crt  server.crt.csr  server.key /haplo/sslcerts'
     rm -fr /tmp/haplo-sslcerts
