@@ -79,3 +79,13 @@ You can also easily run the test suite
     docker build -t haplo-test .
     docker run haplo-test
     cd ..
+
+###Plugin Development
+
+Use of the [Plugin Tool](https://docs.haplo.org/dev/tool/plugin) for devlopment requires the server be run in a slightly different mode. We have a haplo-dev image with the modified configuration
+
+    cd haplo-dev
+    docker build -t haplo-dev .
+    cd ..
+
+And then `docker run haplo-dev` instead of `docker run haplo-app`.
