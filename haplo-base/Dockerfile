@@ -1,16 +1,18 @@
-FROM ubuntu:16.04
+FROM ubuntu:20.04
 MAINTAINER Peter Tribble <peter.tribble@haplo.com>
-ENV PG_VERSION 9.5
+ENV PG_VERSION 12
+ENV TZ=UTC
+RUN ln -sf /usr/share/zoneinfo/$TZ /etc/localtime
 RUN apt-get update && apt-get install -y --no-install-recommends \
   avahi-daemon \
   curl \
   g++ \
   git \
   language-pack-en \
-  libxapian22v5 \
+  libxapian30 \
   make \
   maven \
-  openjdk-8-jdk-headless \
+  openjdk-8-jdk \
   patch \
   software-properties-common \
   sudo \
