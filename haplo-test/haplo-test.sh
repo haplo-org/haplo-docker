@@ -39,9 +39,8 @@ sudo rm -f /var/run/postgresql/.s.*
 
 #
 # create test certificates
-# (note: this can fail, in which case simply run it again)
 #
-deploy/setup_developer_vm
+deploy/make_test_certs.sh
 
 #
 # finally, run the test
